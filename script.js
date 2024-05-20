@@ -136,9 +136,10 @@ console.log ("tamaño del array", listaAnimales.length)
 /* for es una palabra reservada para crear bucles */
 /* se sigues 3 instrucciones. 
 PARAMETROS
-1. El contador en este caso inicia en 0.
-2. será una condición será cuando el bucle se detenga (control===10)
-3. Como queremos que se comporte en cada vuelta */
+1. El contador en este caso inicia en 0. En el ej: (let i = 0)
+2. será una condición será cuando el bucle se detenga (control===10) En el ej: i < listaAnimales.length
+3. Como queremos que se comporte en cada vuelta En el ejemplo (i++)
+ */
 /* el uso de los 3 iguales(=) es comparar, si se pone solo uno(=) es asignar */
 /* entre {} se pone el codigo en si mismo, lo que hará */
 /* for(let contador = 0; contador < listaAnimales.length; contador = contador + 1){
@@ -146,22 +147,120 @@ PARAMETROS
     console.log(listaAnimales[contador])
  */   
 //También se puede poner al final ++ en lugar de poner el contador + 1
-for(let contador = 0; contador < listaAnimales.length; contador = contador ++){
+/* for(let contador = 0; contador < listaAnimales.length; contador = contador ++){
     console.log (contador)
-    console.log(listaAnimales[contador])
-}
+    console.log(listaAnimales[contador]) } */
+
 // i hace referencia a index, usualmente así se encuentran
-for(let i = 0; i < listaAnimales.length; i++){
-    console.log (i)
+for(let i = 0; i < listaAnimales.length; i++) {
+    console.log(i)
     console.log(listaAnimales[i])
 }
 
-
-
-/* CONDICIONES  */
+/* CONDICIONES/CONDICIONALES*/
 // - Igualdad: ===
+// - Directe de: !== 
 // - Menor que: <
 // - Mayor que: >
 // - Menor o igual que: <=
 // - Mayor o Igual que: >=
+// if es igual a decir, si esto se cumple, haga tal ...
+/* EJEMPLEO : 
+if (4 < 10) {
+    console.log ("la condición es verdera")
+}
+// Else hace referencia "si no" o "en caso contrario" se cumple la condiciém anterio entonces muestre tal mensaje
+ */
+
+/* let numero= 10
+if (10 === numero) {
+    console.log ("la condición es verdera")
+} else {
+    console.log("la condición en falsa")
+}
+ */
+let numero= 10
+if (10 === numero) {
+    console.log ("Numero es 10")
+} else if (numero === 11) {
+    console.log("Numero es 11")
+} else if (numero === 12) {
+        console.log("Numero es 12")    
+} else {
+    console.log("No es ni 10, ni 11, ni 12")
+}
+
+
+//---------------------Operadores Lógicos--------------------
+//and = y = &&
+//or = o = ||
+
+//Ejemplo con or = o = ||
+let texto = "texto"
+
+/* if (texto === "a" || texto === "algo") {
+    console.log("la condición es verdadera")
+}
+ */
+
+if (texto === "a" || texto === "b" || texto === "c") {
+    console.log("la condición es verdadera")
+} else {
+    console.log("el texto no es ni 'a' ni 'b' ni 'c'")
+}
+
+// and = y= &&
+let numero3 = 20
+
+if (numero3 > 0 && numero3 < 10) {
+    console.log("Nuestro número esta entre el 0 y el 10")
+} else {
+    console.log("Nuestro número no esta entre el 0 y 10")
+}
+
+//---- Este es otro para bucles - While = Mientras
+
+let contador=0
+while (contador < 5) {
+    //console.log("ciclo:", contador)
+    //contador = contador+1 o se escribe solo contador++ que sería lo mismo.
+    contador++
+    }
+
+
+//--------------------FUNCIONES-------
+// Estructuras que reciben paramentros, procesarlos  
+// y devolver algun valor dependiendo de la función
+//Ayuda a agrupar codigo y ejecutarlo en el momento que queramos, cuantes veces lo hagamos
+//Sirve para agrupar codigo con un solo fin, por ejemplo sumar. y luego se puede reutilizar
+
+//Declaración de la función, le indicamos cuantos parametros recibira, ej: valor1, valor2
+
+//Declaración antigua con JavaScript 
+/* function sumar (valor1, valor2) {
+      let resultado = valor1 + valor2
+      return resultado
+} */
+
+//Declaración ACTUAL con ECMAscript
+//Funcion flecha - normalmente van a ser constantes
+const sumar = (valor1, valor2) => {
+    let resultado = valor1 + valor2
+    return resultado
+}  
+
+//al poner los dos parentesis entiende que estamos llamando/ejecutando la función
+
+//Primera manera de hacerlo
+let resultadoSuma = sumar(5, 10)
+console.log("el resultado de la suma", resultadoSuma)
+ 
+
+//Segunda manera de hacerlo funcionan igual
+console.log("el resultado de la suma1", sumar(5, 10))
+
+console.log("el resultado de la suma2", sumar(10, 50))
+console.log("el resultado de la suma3", sumar(100, 35))
+console.log("el resultado de la Suma4", sumar(44566, 45656))
+
 
