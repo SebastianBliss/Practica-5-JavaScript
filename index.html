@@ -10,9 +10,34 @@
 <body>
     <h1>Practica JavaScript</h1>
 
+    <!-- ej de ejercicio de Lectura porque estamos leyendo datos del input
+ y escritura porque estamos metiendo información dentro de una etiqueta de HTML -->
+    <h2>Ejercicio de Lectura y Escritura con JS</h2>
+<!-- Conectado con el JS -->
     <input id="valor1" type="number">
-    <button onclick="mostrarValor()">Mostrar Valor</button>
-<!-- 
+    <!-- //oneclick es llamada evento, entonces cada vez que se haga un click, va a ejecutar mostrar valor. -->
+    <button onclick="mostrarValor()">
+        Mostrar Valor
+    </button>
+    <span id="input-valor">aqui vamos a mostrar el valor del input</span>
+
+    <h2>Calculadora</h2>
+    <input id="input-numero-1" type="number" placeholder="Ingresa valor 1">
+    <span id="operacion">operacion</span>
+    <input id="input-numero-2" type="number" placeholder="ingresa valor 2">
+    
+    <!-- a este span se le pone el igual solo para que muestre el igual en la pantalla junto al resultado -->
+    <span>=</span>
+    <span id="resultado">resultado</span>
+
+    <!-- aca pusimos el div solo para encapsular los botones y pasarlos abajo del input -->
+ <div>
+    <button onclick="realizarOperacion('suma')">Sumar</button>
+    <button onclick="realizarOperacion('resta')">Restar</button>
+    <button onclick="realizarOperacion('multiplicacion')">Multiplicar</button>
+    <button onclick="realizarOperacion('division')">dividir</button>
+</div>
+    <!-- 
   Script indica que escribire Javascript se si hace en el HTML, al pasarlo al script.js, no es necesario poner la etiqueta script
     <script>
         console.log("Hola Mundo");
